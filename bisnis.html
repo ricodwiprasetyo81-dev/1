@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryuu & Jafar - Jasa Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .profile img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: block;
+      width: 270px;
+      padding: 15px;
+      margin: 12px auto;
+      background: #fff;
+      color: #333;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #e0f7ff;
+      transform: scale(1.05);
+    }
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+    .section {
+      background: rgba(255,255,255,0.15);
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 25px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .section p {
+      margin: 8px 0;
+      font-size: 0.95rem;
+    }
+
+    .socials {
+      margin-top: 30px;
+    }
+
+    .socials p {
+      margin: 5px 0;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    /* animasi shake */
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-4px); }
+      50% { transform: translateX(4px); }
+      75% { transform: translateX(-4px); }
+      100% { transform: translateX(0); }
+    }
+    .shake {
+      animation: shake 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile">
+    <img src="pp.jpg" alt="Profil Ryuu & Jafar">
+    <div class="title">Jasa Pembuatan Website & Produk Digital</div>
+    <div class="subtitle">Dibuat oleh Ryuu & Jafar</div>
+  </div>
+
+  <a href="https://contoh-link-jasa.com" class="btn">Jasa Pembuatan Website</a>
+  <a href="https://contoh-link-produk.com" class="btn">Link Produk</a>
+
+  <div class="section">
+    <h2>Tentang Jasa Kami</h2>
+    <p>Kami menyediakan jasa pembuatan website modern, cepat, dan responsif. 
+       Selain itu, kami juga membantu menyediakan produk digital yang siap pakai.</p>
+  </div>
+
+  <div class="section">
+    <h2>Kenapa Pilih Kami?</h2>
+    <p>✔ Desain modern & responsif</p>
+    <p>✔ Proses cepat & mudah</p>
+    <p>✔ Harga bersahabat</p>
+  </div>
+
+  <div class="socials">
+    <p>Instagram: @always_luxxy.</p>
+    <p>TikTok: @always_luxxy</p>
+    <p>WhatsApp: 081542192623</p>
+  </div>
+
+  <script>
+    // kasih efek shake pas tombol di klik
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault(); // biar bisa lihat animasi sebelum redirect
+        btn.classList.add('shake');
+        setTimeout(() => {
+          btn.classList.remove('shake');
+          window.location.href = btn.getAttribute('href'); // baru redirect
+        }, 300);
+      });
+    });
+  </script>
+
+</body>
+</html>
